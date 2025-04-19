@@ -1,0 +1,216 @@
+/*  Font kerennn */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Warna Latar */
+body {
+    background-color: #F4EAE0;
+    color: #333;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #5C67F2, #3498db);
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Container Utama */
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Form Tambah Buku */
+#bookForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+/* Form Pencarian */
+#searchBook {
+    margin-bottom: 20px;
+}
+
+/* Label dan Input */
+label {
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #5C67F2;
+    border-radius: 8px;
+    background-color: #F9F9F9;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #3498db;
+    background-color: #fff;
+    outline: none;
+}
+
+/* Button */
+button {
+    background: linear-gradient(135deg, #5C67F2, #3498db);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #4a54e1, #2e86c1);
+}
+
+/* Layout 2 Kolom */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* List Buku */
+.book-list {
+    background: #fdfdfd;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.book-list h2 {
+    text-align: center;
+    color: #5C67F2;
+}
+
+/* Item Buku */
+[data-testid="bookItem"] {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    border-left: 6px solid #5C67F2;
+    margin-bottom: 10px;
+}
+
+[data-testid="bookItem"]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+[data-testid="bookItem"] h3 {
+    color: #5C67F2;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+[data-testid="bookItem"] p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+
+/* Button dalam item buku */
+[data-testid="bookItem"] div {
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+}
+
+[data-testid="bookItem"] button {
+    margin-right: 5px;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 6px;
+    background: #5C67F2;
+    transition: all 0.3s ease;
+}
+
+[data-testid="bookItem"] button:hover {
+    background: #4a54e1;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* css edit buku */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal Buttons */
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.modal-buttons button {
+  flex: 1;
+  padding: 8px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.modal-buttons button:first-child {
+  background: #5C67F2;
+  color: white;
+}
+
+.modal-buttons button:last-child {
+  background: #ccc;
+}
